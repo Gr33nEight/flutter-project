@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_n8/views/login/login_view.dart';
+import 'package:flutter_project_n8/views/register/register_view.dart';
 
 void main() {
   runApp(const MainApp());

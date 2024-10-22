@@ -15,7 +15,7 @@ class _LoginViewState extends State<LoginView> {
 
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  bool obscureText = false;
+  bool obscureText = true;
 
   @override
   Widget build(BuildContext context) {
@@ -65,8 +65,7 @@ class _LoginViewState extends State<LoginView> {
               ),
             ),
             const Spacer(),
-            Padding(padding: const EdgeInsets.symmetric(horizontal: 0),
-              child: SizedBox(
+            SizedBox(
               width: double.infinity,
               height: 50,
               child: ElevatedButton(
@@ -83,7 +82,6 @@ class _LoginViewState extends State<LoginView> {
                 ),
               )
             ),
-            ),
             const Spacer(),
             GestureDetector(
               child: Row(
@@ -99,7 +97,12 @@ class _LoginViewState extends State<LoginView> {
                   )
                 ],
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const RegisterView()),
+                );
+              },
             ),
             const Spacer(),
           ],
